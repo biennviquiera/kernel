@@ -1,0 +1,1 @@
+savedcmd_samples/trace_printk/trace-printk.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o samples/trace_printk/trace-printk.ko samples/trace_printk/trace-printk.o samples/trace_printk/trace-printk.mod.o;  true

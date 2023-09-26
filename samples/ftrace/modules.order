@@ -1,0 +1,4 @@
+samples/ftrace/ftrace-direct.o
+samples/ftrace/ftrace-direct-too.o
+samples/ftrace/ftrace-direct-modify.o
+samples/ftrace/sample-trace-array.o

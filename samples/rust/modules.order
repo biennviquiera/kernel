@@ -1,0 +1,3 @@
+samples/rust/rust_minimal.o
+samples/rust/rust_semaphore.o
+samples/rust/rust_selftests.o

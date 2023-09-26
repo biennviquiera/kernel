@@ -1,0 +1,1 @@
+savedcmd_samples/rust/rust_semaphore.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o samples/rust/rust_semaphore.ko samples/rust/rust_semaphore.o samples/rust/rust_semaphore.mod.o;  true

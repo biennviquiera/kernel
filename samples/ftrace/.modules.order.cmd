@@ -1,0 +1,1 @@
+savedcmd_samples/ftrace/modules.order := {   echo samples/ftrace/ftrace-direct.o;   echo samples/ftrace/ftrace-direct-too.o;   echo samples/ftrace/ftrace-direct-modify.o;   echo samples/ftrace/sample-trace-array.o; :; } > samples/ftrace/modules.order
