@@ -30,9 +30,10 @@ fn main() -> io::Result<()> {
     } // writer goes out of scope and flushes automatically
 
     file.seek(SeekFrom::Start(0))?;
-    let out = file.read(&mut buffer)?;
-    let result_str = String::from_utf8(buffer[..out].to_vec()).unwrap();
-    println!("Received from kernel after second write: {}", result_str);
+    let outp = file.read(&mut buffer)?;
+
+    let result_str2 = String::from_utf8(buffer[..outp].to_vec()).unwrap();
+    println!("Received from kernel after second write: {}", result_str2);
 
     Ok(())
 }
