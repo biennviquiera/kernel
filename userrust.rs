@@ -23,14 +23,18 @@ fn main() -> io::Result<()> {
     let result_str = String::from_utf8(buffer[..out].to_vec()).unwrap();
     println!("Received from kernel after first write: {}", result_str);
 
+    file.seek(SeekFrom::Start(0))?;
+    
     {
         let message = b"Second write: Hello again, kernel!";
         let mut writer = BufWriter::new(&file);
         writer.write_all(message)?;
+        writer.flush()?; // Explicitly flush the buffer
         println!("Written message: {}", String::from_utf8_lossy(message));
     }
     
     file.seek(SeekFrom::Start(0))?;
+
     let outp = file.read(&mut buffer)?;
 
     let result_str2 = String::from_utf8(buffer[..outp].to_vec()).unwrap();
